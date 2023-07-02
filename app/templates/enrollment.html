@@ -1,0 +1,16 @@
+   
+{% extends "layout.html" %}
+
+
+  {% block content %} 		
+		<div class="row">
+        <div class="col-md-12 text-center"> 
+				<h1> You are enrolled in:</h1>
+				{% for class in classes %}
+				<p>Course ID: {{ class.classes["courseID"] }} </p>
+				<p>Course Title: {{ class.classes["description"] }} </p>
+				{% endfor %}
+        </div>
+    </div>
+	{% endblock %}	
+
